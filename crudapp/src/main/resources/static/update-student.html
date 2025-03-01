@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add-student.html">Add Student</a></li>
+        <li><a href="update-student.html">Update Student</a></li>
+        <li><a href="delete-student.html">Delete Student</a></li>
+    </ul>
+</nav>
+
+<!-- Update Student Form -->
+<div class="container">
+    <div class="form-container">
+        <h2>Update Student</h2>
+        <input type="number" id="updateId" placeholder="Student ID">
+
+        <select id="updateField">
+            <option value="">Select Field to Update</option>
+            <option value="firstname">First Name</option>
+            <option value="lastname">Last Name</option>
+            <option value="email">Email</option>
+        </select>
+
+        <input type="text" id="updateValue" placeholder="New Value">
+
+        <button onclick="updateStudent()">Update</button>
+    </div>
+
+    <!-- Student Table -->
+    <div class="table-container">
+        <h2>Student List</h2>
+        <table id="studentsTable">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody id="studentsTableBody">
+            <!-- Data will be inserted dynamically -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script> document.addEventListener("DOMContentLoaded", fetchStudents); </script>
+
+</body>
+</html>
