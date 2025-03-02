@@ -5,38 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage your students with ease</p>
+    </header>
 
-<!-- Navbar -->
-<nav>
-    <ul>
-        <li><a href="add-student.html">Add Student</a></li>
-        <li><a href="update-student.html">Update Student</a></li>
-        <li><a href="delete-student.html">Delete Student</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a class="button" href="add-student.html"><i class="fas fa-user-plus"></i> Add Student</a></li>
+            <li><a class="button" href="update-student.html"><i class="fas fa-user-edit"></i> Update Student</a></li>
+            <li><a class="button" href="delete-student.html"><i class="fas fa-user-minus"></i> Delete Student</a></li>
+        </ul>
+    </nav>
 
-<!-- Student Table -->
-<div class="table-container">
-    <h2>Student List</h2>
-    <table id="studentsTable">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-        </tr>
-        </thead>
-        <tbody id="studentsTableBody">
-        <!-- Student data will be inserted here dynamically -->
-        </tbody>
-    </table>
+    <section class="hero">
+        <h2>Welcome to the Student Management System</h2>
+        <p>Easily manage student information with our user-friendly platform.</p>
+    </section>
 
+    <div class="table-container">
+        <h2>Student List</h2>
+        <table id="studentsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="studentsTableBody">
+            </tbody>
+        </table>
+    </div>
 
-</div>
+    <footer>
+        <p>&copy; 2025 Student Management System. All rights reserved.</p>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
