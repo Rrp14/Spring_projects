@@ -4,52 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Student</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100">
 
-<!-- Navbar -->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="add-student.html">Add Student</a></li>
-        <li><a href="update-student.html">Update Student</a></li>
-        <li><a href="delete-student.html">Delete Student</a></li>
+<nav class="bg-blue-800 p-4 shadow-lg rounded-b-lg">
+    <ul class="flex justify-center space-x-20 font-bold text-lg">
+        <li><a class="text-white hover:text-blue-400 " href="index.html">Home</a></li>
+        <li><a class="text-white hover:text-blue-400" href="add-student.html">Add Student</a></li>
+        <li><a class="text-white hover:text-blue-400" href="update-student.html">Update Student</a></li>
+        <li><a class="text-white hover:text-blue-400" href="delete-student.html">Delete Student</a></li>
     </ul>
 </nav>
 
-<!-- Update Student Form -->
-<div class="container">
-    <div class="form-container">
-        <h2>Update Student</h2>
-        <input type="number" id="updateId" placeholder="Student ID">
+<div class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
+    <div class="form-container text-center mb-8">
+        <h2 class="text-blue-800 mb-4 text-2xl font-bold">Update Student</h2>
+        <input class="p-3 border border-blue-800 rounded-lg mb-4 w-full" type="number" id="updateId" placeholder="Student ID">
 
-        <select id="updateField">
+        <select id="updateField" class="p-3 border border-blue-800 rounded-lg mb-4 w-full">
             <option value="">Select Field to Update</option>
             <option value="firstname">First Name</option>
             <option value="lastname">Last Name</option>
             <option value="email">Email</option>
         </select>
 
-        <input type="text" id="updateValue" placeholder="New Value">
+        <input class="p-3 border border-blue-800 rounded-lg mb-4 w-full" type="text" id="updateValue" placeholder="New Value">
 
-        <button onclick="updateStudent()">Update</button>
+        <button class="bg-green-600 text-white py-2 px-4 rounded-lg shadow-md m-2 hover:bg-green-700" onclick="updateStudent()">Update</button>
     </div>
 
-    <!-- Student Table -->
     <div class="table-container">
-        <h2>Student List</h2>
-        <table id="studentsTable">
-            <thead>
+        <h2 class="text-center mb-4 text-gray-800">Student List</h2>
+        <table id="studentsTable" class="min-w-full border border-gray-300 shadow-lg rounded-lg overflow-hidden">
+            <thead class="bg-gray-700 text-white">
             <tr>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
+                <th class="p-4 border-b border-gray-300">ID</th>
+                <th class="p-4 border-b border-gray-300">First Name</th>
+                <th class="p-4 border-b border-gray-300">Last Name</th>
+                <th class="p-4 border-b border-gray-300">Email</th>
             </tr>
             </thead>
             <tbody id="studentsTableBody">
-            <!-- Data will be inserted dynamically -->
             </tbody>
         </table>
     </div>
@@ -57,6 +53,5 @@
 
 <script src="script.js"></script>
 <script> document.addEventListener("DOMContentLoaded", fetchStudents); </script>
-
 </body>
 </html>
